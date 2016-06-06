@@ -86,7 +86,9 @@
             1,
             "^([A-Z][a-z0-9]+)+Type$"
         ],
-        "arrow-body-style": ["error", "always"]
+        "arrow-body-style": ["error", "always"],
+        "max-len": ["error", 300]
+
 
     },
     "settings": {
