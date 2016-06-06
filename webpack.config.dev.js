@@ -87,7 +87,7 @@ commonSettings.plugins.push(new webpack.HotModuleReplacementPlugin());
 let HtmlWebpackPlugin = require("html-webpack-plugin");
 
 commonSettings.plugins.push(new HtmlWebpackPlugin({
-    template: commonSettings.paths.assets + "/index.html"
+    template: `${commonSettings.paths.assets}/index.html`
 }));
 
 module.exports = commonSettings;
