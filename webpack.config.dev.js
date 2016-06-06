@@ -28,9 +28,9 @@ commonSettings.debug = true;
  * @type {string}
  */
 // For better development experience (debugging).
-commonSettings.devtool = "source-map";
+// commonSettings.devtool = "source-map";
 // For faster development builds.
-// commonSettings.devtool = 'source-map';
+commonSettings.devtool = "eval";
 
 /**
  * @link https://webpack.github.io/docs/webpack-dev-server.html
