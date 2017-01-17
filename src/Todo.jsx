@@ -1,15 +1,25 @@
 import React from "react";
-import { ShallowComponent } from "robe-react-commons";
+import { ShallowComponent, Store, RemoteEndPoint } from "robe-react-commons";
 import { Well } from "react-bootstrap";
 import TodoItem from "./TodoItem";
 export default class Todo extends ShallowComponent {
+
+    store;
+
     constructor(props) {
         super(props);
+
+        this.store = new Store({
+            endPoint: new RemoteEndPoint({
+                url: "http://127.0.0.1:3000/todo",
+                idField: "id"
+            }),
+            idField: "id",
+            autoLoad: true
+        });
+
         this.state = {
-            items: [
-                { id: 1, value: "Süt Al" },
-                { id: 2, value: "Yumurta Al" }
-            ]
+            items: []
         }
     }
     render() {
@@ -42,4 +52,11 @@ export default class Todo extends ShallowComponent {
         this.setState(state);
     }
 
+    componentDidMount() {
+        this.store.read((data) => {
+            this.setState({
+                items: data.data
+            });
+        });
+    }
 }
