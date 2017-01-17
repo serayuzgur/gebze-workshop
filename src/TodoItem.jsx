@@ -31,7 +31,7 @@ export default class TodoItem extends ShallowComponent {
         }
         return (
             <li onClick={this.onClick}>
-                <span>ID: {this.props.item.id} {itemValue}</span>
+                {itemValue}
             </li>
         )
     }

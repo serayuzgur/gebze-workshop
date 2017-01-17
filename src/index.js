@@ -4,16 +4,21 @@ import React from "react";
 import { render } from "react-dom";
 import RApplication from "robe-react-ui/lib/Application";
 import { ShallowComponent, Application } from "robe-react-commons";
+import { Grid } from "react-bootstrap";
 import Todo from "./Todo";
 
 const app = document.getElementById("app");
 
 
 render(
-    (<RApplication language={tr}>
-        <h1>TODO Application</h1>
-        <Todo />
-    </RApplication>),
+    (
+        <Grid>
+            <RApplication language={tr}>
+                <h1>Todo Application</h1>
+                <Todo />
+            </RApplication>
+        </Grid>
+    ),
     app
 );
 
