@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Seray",
+      "surname": "Uzgur"
+    },
+    {
+      "id": 2,
+      "name": "Mete",
+      "surname": "Işık"
+    },
+    {
+      "name": "Onur",
+      "surname": "Arslan",
+      "id": 3
+    }
+  ]
+}
